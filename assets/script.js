@@ -1,13 +1,21 @@
+
+// creating declarations for buttons
+
 const startButton = document.getElementById('start-btn2')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
+// const scoreButton = document.getElementById('scores-btn3')
 
 
+// Gets answers implemented into answers buttons
 const questionElement = document.getElementById('question')
 const answersButtonsElement = document.getElementById('answers-buttons')
+
 var sec = 60;
+
 let shuffledQuestions, currentQuestionIndex
 
+// adds event listener to the buttons start and next
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
@@ -15,7 +23,7 @@ nextButton.addEventListener('click', () => {
 })
 
 
-
+//  At the begining of the quiz when you clin on the start button it disapears
 function startGame() {
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(() => Math.random() - .5)
@@ -47,8 +55,9 @@ function startGame() {
 
 
 
-
+// Sets action for when next button clicked, the question switches randomly 
 function setNextQuestion() {
+    resetState()
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
@@ -73,7 +82,7 @@ function resetState() {
         answersButtonsElement.removeChild(answersButtonsElement.firstChild)
     }
 }
-
+// Function that allows to select an answer 
 function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
@@ -81,13 +90,14 @@ function selectAnswer(e) {
     Array.from(answersButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    if(questions.length > currentQuestionIndex + 1) {
+    if(shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove('hide')
     } else {
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
-    }
 }
+    }
+
 
 function setStatusClass(element, correct) {
     clearStatusClass(element)

@@ -4,6 +4,10 @@
       box-sizing: border-box;
   }
 
+  :root {
+    --hue-wrong:0; 
+    --hue-correct: 145;
+  }
   /* incorporated starter code with the customizing options */
   html,
   body,
@@ -79,8 +83,8 @@
       display: flex;
       margin-top: 30px;
       margin-bottom: 30px;
-      margin-right: 78px;
-      margin-left: auto;
+      /* margin-right: 760px; */
+      /* margin-left: auto; */
       background-color: #E9B540;
       border: 2px solid hsl(205, 15%, 16%);
       color: hsl(205, 15%, 16%);
@@ -94,6 +98,19 @@
       background-color: #F8DFB1;
 
   }
+/* 
+
+  .btnansw.correct  {
+    --hue: var(--hue-correct)
+
+  }
+
+  .btnansw.wrong {
+    --hue: var(--hue-wrong)
+
+  } */
+
+  
   .btn2 {
     display: flex;
     margin-top: 30px;
@@ -136,9 +153,9 @@
 
   .btnansw {
       /* display: flex; */
-     justify-content: left;
+      justify-content: left;
       background-color: #FFF2D7;
-      padding: .7rem 5rem;
+      /* padding: .7rem 5rem; */
       font-weight: bold;
       cursor: pointer;
       border-radius: 1rem;

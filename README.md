@@ -35,6 +35,8 @@ Below the quiz box  appears "Agree, review here:..." or "Disagree, review here: 
 A link to study material bellow the argument in golden letters. 
 On the right is next button to the next question in same golded color with black text. 
 
+Inpiration credit: Web Dev Simplified "Build a Quiz app with JavaScript"
+
 
 
 
