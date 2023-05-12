@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>QuizThis</title>
+
+</head>
+<!-- Container for the whole code -->
+
+<body>
+    <!-- <section class="screen"> -->
+    <header>
+        <h2>Your Success starts here!</h2>
+        <h1>QuizThis : JavaScript</h1>
+    </header>
+    <div id="timerDisplay" class="timer">
+    </div>
+    <button id="incorrect">Simulate Incorrect Answer</button>
+
+    <div class="container">
+        <section class="mainbtns" class="hide">
+            <button id="start-btn2" class="start-btn2 btn2">Start</button>
+        </section>
+        
+        <div id="question-container" class="hide">
+            <div id="question" Question></div>
+            <div id="answers-buttons" class="btnansw" >
+            </div>
+        </div>
+    </div>
+    <section class="mainbtns">
+        <!-- Button to go to the next question on click -->
+        <button id="next-btn" class="next-btn btn hide">Next</button>
+    </section>
+
+  
+
+    <section class="scores">
+        <button id="scores-btn3" class="btn3">Scores</button>
+    </section>
+    <section class="footer">
+        <section class="active">
+            <h3>Technical Difficulties: 801-333-8133</h3>
+            <h2> All rights reserved by QuizThis</h2>
+        </section>
+
+        <p>
+            &copy; 2023
+        </p>
+        <!-- Java script always loads at the buttom, if put at the top must include "defer" to run it last -->
+        <script src="./assets/script.js"></script>
+    </section>
+</body>
+
+</html>
